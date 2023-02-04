@@ -7,10 +7,10 @@ export default function Comments({ comments, id }) {
   const [text, setText] = useState();
 
   return (
-    <div className="mx-32 mt-5 rounded-lg border-2 p-2">
+    <div className="flex flex-col gap-2 mx-32 mt-5 rounded-lg border-2 p-2">
       <h1 className="text-center font-bold">{comments.length} comments</h1>
-      <div className="flex items-center h-32 gap-3">
-        <img className="w-20 h-20" src="/user.png" alt="" />
+      <div className="flex items-center h-26 gap-3">
+        <img className="w-14 h-14" src="/user.png" alt="" />
         <form
           onSubmit={async (e) => {
             e.preventDefault();
@@ -21,11 +21,10 @@ export default function Comments({ comments, id }) {
               Router.reload(window.location.pathname);
             }
           }}
-          className="mt-3 flex flex-grow gap-3 w-20 h-20"
+          className="flex flex-grow gap-3 w-20 h-14"
         >
           <div className="flex-grow">
             <textarea
-              rows="3"
               className="p-2 border rounded-mg w-full resize-none"
               onChange={(e) => {
                 setText(e.target.value);
@@ -35,12 +34,12 @@ export default function Comments({ comments, id }) {
               required
             ></textarea>
           </div>
-          <button className="self-center border p-2 h-12 rounded-mg">
+          <button className="self-center border p-2 h-10 rounded-mg">
             Comment
           </button>
         </form>
       </div>
-      <div>
+      <div className="mt-2">
         {comments.map((item) => {
           return (
             <div className="mt-2 flex gap-2" key={item._id}>
