@@ -26,7 +26,7 @@ export default function NavBar({ currentPage }) {
   return (
     <nav>
       <>
-        <div className="flex bg-gray-800 px-32 h-16 items-center">
+        <div className="lg:px-32 flex bg-gray-800 p-2 h-16 items-center">
           <div>
             <h1 className="text-white">Blog</h1>
           </div>

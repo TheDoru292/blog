@@ -7,7 +7,7 @@ export default function Comments({ comments, id }) {
   const [text, setText] = useState();
 
   return (
-    <div className="flex flex-col gap-2 mx-32 mt-5 rounded-lg border-2 p-2">
+    <div className="lg:mx-32 md:border-2 sm:border-0 md:mx-3 flex flex-col gap-2 mt-5 rounded-lg p-2">
       <h1 className="text-center font-bold">{comments.length} comments</h1>
       <div className="flex items-center h-26 gap-3">
         <img className="w-14 h-14" src="/user.png" alt="" />

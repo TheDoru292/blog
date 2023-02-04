@@ -15,10 +15,10 @@ export default function Post({ postData, comments }) {
       <NavBar currentPage="pages" />
       <PostLayout post={postData.post} />
       <Comments comments={postData.comments} id={postData.post._id} />
-      <div className="mx-32 mt-5 rounded-lg border-2 p-2">
+      <div className="lg:mx-32 md:border-2 sm:border-0 md:mx-3 mx-32 mt-5 rounded-lg p-2">
         <h1 className="text-center font-bold">Credits</h1>
         <a href="https://www.flaticon.com/free-icons/user" title="user icons">
-          User icons created by kmg design - Flaticon
+          <p>User icons created by kmg design - Flaticon</p>
         </a>
       </div>
     </div>
