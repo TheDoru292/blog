@@ -14,7 +14,7 @@ export default function NavBar({ currentPage }) {
     {
       name: "Posts",
       href: "/posts",
-      current: currentPage === "page" ? true : false,
+      current: currentPage === "posts" ? true : false,
     },
     {
       name: "Random Post",
