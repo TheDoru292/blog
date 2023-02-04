@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import Head from "next/head";
 import Link from "next/link";
 
 export async function getServerSideProps() {
@@ -18,6 +19,9 @@ export async function getServerSideProps() {
 export default function Home({ posts }) {
   return (
     <div>
+      <Head>
+        <title>Homepage - Blog</title>
+      </Head>
       <NavBar currentPage="home" />
       <div className="mx-32 mt-5 rounded-lg border-2 p-2">
         <h2 className="text-center text-xl font-semibold">

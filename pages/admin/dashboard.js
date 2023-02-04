@@ -1,5 +1,6 @@
 import AdminNavBar from "@/components/AdminNavBar";
 import AdminWelcome from "@/components/AdminWelcome";
+import Head from "next/head";
 
 export async function getServerSideProps(context) {
   if (context.req.cookies["jwt"] == undefined) {
@@ -44,6 +45,9 @@ export async function getServerSideProps(context) {
 function AdminDashboard({ user }) {
   return (
     <div>
+      <Head>
+        <title>Dashboard</title>
+      </Head>
       <AdminNavBar currentPage="dashboard" />
       <div className="mx-10 mt-5 max-w-7x1 px-2 sm:px-6 lg:px-8 flex flex-row">
         <AdminWelcome user={user} />

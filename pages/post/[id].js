@@ -2,12 +2,16 @@ import NavBar from "@/components/NavBar";
 import PostLayout from "@/components/PostLayout";
 import { getAllPostsUrl, getPostData } from "@/lib/postsPublic";
 import Comments from "@/components/Comments";
+import Head from "next/head";
 
 export default function Post({ postData, comments }) {
   console.log(postData);
 
   return (
     <div>
+      <Head>
+        <title>{postData.post.title} - Blog</title>
+      </Head>
       <NavBar currentPage="pages" />
       <PostLayout post={postData.post} />
       <Comments comments={postData.comments} id={postData.post._id} />

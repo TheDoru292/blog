@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Router from "next/router";
 import axios from "axios";
+import Head from "next/head";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState();
@@ -36,6 +37,9 @@ export default function AdminLogin() {
 
   return (
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <Head>
+        <title>Login</title>
+      </Head>
       <div className="w-full max-w-md space-y-8">
         <div>
           <h1 className="text-center text-3xl mt-6 font-bold tracking-tight text-gray-900">
